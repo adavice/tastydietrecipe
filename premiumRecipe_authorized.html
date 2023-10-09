@@ -1,0 +1,287 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<base href="http://Onlinerecipesbook.net/"/>-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Premium Recipes</title>
+    <link rel="shortcut icon" href="https://se.tastydietrecipe.com/imgs/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://se.tastydietrecipe.com/imgs/favicon.png">
+    <link rel="stylesheet" href="https://se.tastydietrecipe.com/css/open_sans.css">
+    <link rel="stylesheet" href="https://se.tastydietrecipe.com/css/playfair.css">
+    <link rel="stylesheet" href="https://se.tastydietrecipe.com/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://se.tastydietrecipe.com/css/common.css?">
+    <link rel="stylesheet" href="https://se.tastydietrecipe.com/css/slick-carouse1.8.1.css">
+    <link rel="stylesheet" href="https://se.tastydietrecipe.com/css/slick-carouse1.8.1-theme.min.css">
+    <link rel="stylesheet" href="https://se.tastydietrecipe.com/css/privacy.css">
+    <style>
+        @media all and (max-width: 980px) {
+            header .container {
+                height: fit-content !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/premiumRecipe.css">
+    <script type="text/javascript">function clickLogin(myOpen) {
+            if (document.getElementsByTagName('header').length) {
+                var obj = document.getElementsByTagName('header')[0];
+                var obj2 = document.getElementsByClassName('userButton');
+                if (!myOpen && obj2.length) {
+                    obj2[0].getElementsByClassName('open').length && (obj2[0].getElementsByClassName('open')[0].style.display = myOpen ? 'none' : 'block');
+                    obj2[0].getElementsByClassName('close').length && (obj2[0].getElementsByClassName('close')[0].style.display = myOpen ? 'block' : 'none');
+                }
+                myOpen ? (obj.style.border = 'none') : (obj.style.borderBottom = '1px solid #eaecf0');
+                ['login', 'authorized'].forEach(function (val) { obj.getElementsByClassName(val).length && (obj.getElementsByClassName(val)[0].style.display = myOpen ? 'block' : 'none'); });
+                obj.getElementsByClassName('container').length && (obj.getElementsByClassName('container')[0].style.height = myOpen ? 'auto' : '100px');
+                obj.getElementsByClassName('search').length && (obj.getElementsByClassName('search')[0].style.display = myOpen ? 'none' : 'flex');
+                if (myOpen && obj2.length) {
+                    obj2[0].getElementsByClassName('open').length && (obj2[0].getElementsByClassName('open')[0].style.display = myOpen ? 'none' : 'block');
+                    obj2[0].getElementsByClassName('close').length && (obj2[0].getElementsByClassName('close')[0].style.display = myOpen ? 'block' : 'none');
+                }
+            }
+        }
+    </script>
+</head>
+
+<body cz-shortcut-listen="true">
+    <div class="wrapper">
+        <div id="warning" style="display: none;">
+            <div class="container">
+                <span><svg style="height: 20px" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                        viewBox="0 0 24 24" xml:space="preserve">
+                        <g>
+                            <path
+                                d="M12,0C5.373,0,0,5.373,0,12s5.373,12,12,12s12-5.373,12-12S18.627,0,12,0z M12,19.66   c-0.938,0-1.58-0.723-1.58-1.66c0-0.964,0.669-1.66,1.58-1.66c0.963,0,1.58,0.696,1.58,1.66C13.58,18.938,12.963,19.66,12,19.66z    M12.622,13.321c-0.239,0.815-0.992,0.829-1.243,0c-0.289-0.956-1.316-4.585-1.316-6.942c0-3.11,3.891-3.125,3.891,0   C13.953,8.75,12.871,12.473,12.622,13.321z">
+                            </path>
+                        </g>
+                    </svg>
+                    Have a Problem? <a href="https://onlinerecipesbook.com/?page=contactUs">Contact us</a> or <a
+                        href="https://onlinerecipesbook.com/?page=cancel">cancel membership</a>.</span>
+            </div>
+        </div>
+        <header>
+            <div class="container">
+                <a href="https://se.tastydietrecipe.com/" class="logo"><img
+                        src="https://se.tastydietrecipe.com/imgs/1Logo_cooking-01.png" alt=""></a>
+                <div class="search" style="display: flex;">
+                    <form id="searchForm">
+                        <input type="search" id="search" placeholder="Sök" name="search" value="" maxlength="15">
+                        <input type="submit" value="">
+                    </form>
+                </div>
+                <button class="userButton">
+                    <img class="open" src="https://se.tastydietrecipe.com/imgs/user.png" alt=""
+                        onclick="clickLogin(true);">
+                    <img class="close" src="https://se.tastydietrecipe.com/imgs/close.png" alt=""
+                        onclick="clickLogin(false);">
+                </button>
+                <div class="login">
+                    <form id="authenticationForm" action="https://se.tastydietrecipe.com/?page=policy" method="post">
+                        <!--<input type="hidden" name="page" value="policy">-->
+                        <input type="hidden" name="page" value="login">
+                        <input type="text" id="userName" name="u" value="" placeholder="Användare" maxlength="50">
+                        <input type="password" id="userPassword" name="c" placeholder="Lösenord" maxlength="12">
+                        <input type="submit" id="authentication" value="Logga in" name="authentication">
+                        <div class="getPremium">
+                            <span class="text">Har du inget konto?</span>
+                            <a href="https://se.tastydietrecipe.com/?page=getPremium" class="getAccess">Få tillgång till
+                                premium</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+        <main>
+			<section class="premiumRecipe container">
+				<div class="img">
+					<img src="imgs/1.jpg" alt="">
+				</div>
+				<div class="recipe">
+					<h2>Den bästa veganska hamburgaren</h2>
+					<p class="description">Detta enkla recept på vegoburgare med tofu är lätt att göra och passar utmärkt till en
+						vegetarisk och vegansk lunch, middag, picknick eller för en vegetarisk grillfest. Behöver de också
+						vara glutenfria också? Byt bara ut det vanliga mjölet mot någon form av glutenfritt mjöl.
+						Smaklig måltid!</p>
+					<div class="info">
+						<span class="cook">
+							<span class="title">KOKAR IN:</span>
+							<span>25 MINUTER PLUS JÄSNINGSTID</span>
+						</span>
+						<span class="difficulty">
+							<span class="title">SVÅRIGHETER: </span>
+							<span>INTE FÖR TRICKY</span>
+						</span>
+					</div>
+					<div class="nutrition">
+						<span class="title">NÄRINGSMÄSSIGT SAMMANDRAG PER PORTION:
+						</span>
+						<div class="row">
+							<div class="calories">
+								<span class="title">Kalorier
+								</span>
+								<span class="unit"><span class="number">393</span> kcal</span>
+							</div>
+							<div class="fat">
+								<span class="title">Fett
+								</span>
+								<span class="unit"><span class="number">17.2</span> g</span>
+							</div>
+							<div class="saturates">
+								<span class="title">Mättar
+								</span>
+								<span class="unit"><span class="number">2.5</span> g</span>
+							</div>
+							<div class="protein">
+								<span class="title">Protein
+								</span>
+								<span class="unit"><span class="number">8.8</span> g</span>
+							</div>
+							<div class="carbs">
+								<span class="title">Kolhydrat
+								</span>
+								<span class="unit"><span class="number">54.1</span> g</span>
+							</div>
+							<div class="sugars">
+								<span class="title">Socker
+								</span>
+								<span class="unit"><span class="number">4.2</span> g</span>
+							</div>
+							<div class="salt">
+								<span class="title">Natrium
+								</span>
+								<span class="unit"><span class="number">1.1</span> g</span>
+							</div>
+							<div class="fibre">
+								<span class="title">Fibrer
+								</span>
+								<span class="unit"><span class="number">2.8</span> g</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ingredients">
+					<h3>Ingredienser:</h3>
+					<ul class="ingredientsList">
+						<li>250 g starkt brödmjöl</li>
+						<li>2 teskedar torkad jäst</li>
+						<li>1 tesked strösocker</li>
+						<li>olivolja</li>
+						<li>2 vitlöksklyftor</li>
+						<li>1 x 400 g burk hackade tomater</li>
+						<li>några kvistar färsk basilika</li>
+					</ul>
+				</div>
+				<div class="method">
+					<h3>Metod:</h3>
+					<ol class="methodList">
+						<li>Blanda mjöl, jäst, socker, 1 tsk havssalt, 1 msk olja och 180 ml till 200 ml ljummet vatten.
+							ljummet vatten.</li>
+						<li>Knåda till en elastisk deg, täck sedan över och låt jäsa i 1 timme.</li>
+						<li>Skala, hacka och fräs vitlöken i 4 msk olja, tillsätt sedan tomaterna, plocka i
+							basilikablad och krydda med salt och svartpeppar.</li>
+						<li>Förvärm en stekpanna eller grill.</li>
+						<li>Dela degen i 4 bollar och kavla ut varje boll. Pensla ena sidan med olja och
+							grädda med den oljade sidan nedåt i 2 till 4 minuter, eller tills de ser ut att vara genomgräddade.</li>
+						<li>Pensla den råa sidan med olja och vänd och stek tills de är gyllene. Toppa med sås och valfria
+							topping efter eget val.</li>
+					</ol>
+				</div>
+			</section>
+        </main>
+
+        <footer>
+            <a href="https://se.tastydietrecipe.com/" class="logo"><img
+                    src="https://se.tastydietrecipe.com/imgs/1Logo_cooking-01.png" alt=""></a>
+            <section class="ft-main footer-menu">
+                <div class="ft-main-item" id="size">
+                    <h2 class="ft-title">Menu</h2>
+                    <ul>
+                        <li><a href="https://se.tastydietrecipe.com/?page=contactUs">Kontakta oss</a></li>
+                        <li><a href="https://se.tastydietrecipe.com/?page=policy">Integritetspolicy</a></li>
+                        <li><a href="https://se.tastydietrecipe.com/?page=terms">Allmänna Villkor</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-item" id="main-item">
+                </div>
+
+                <div class="ft-main-item footer-contact" id="size">
+                    <h2 class="ft-title">Contact us</h2>
+                    <ul>
+                        <li><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="20" width="20"
+                                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <polygon points="339.392,258.624 512,367.744 512,144.896 "></polygon>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <polygon points="0,144.896 0,367.744 172.608,258.624 "></polygon>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M480,80H32C16.032,80,3.36,91.904,0.96,107.232L256,275.264l255.04-168.032C508.64,91.904,495.968,80,480,80z">
+                                        </path>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M310.08,277.952l-45.28,29.824c-2.688,1.76-5.728,2.624-8.8,2.624c-3.072,0-6.112-0.864-8.8-2.624l-45.28-29.856
+                                L1.024,404.992C3.488,420.192,16.096,432,32,432h448c15.904,0,28.512-11.808,30.976-27.008L310.08,277.952z">
+                                        </path>
+                                    </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                            </svg>
+                            <a href="mailto:support@tastydietrecipe.com">support@tastydietrecipe.com</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://se.tastydietrecipe.com/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://se.tastydietrecipe.com/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://se.tastydietrecipe.com/js/slick-carouse1.8.1.min.js"></script>
+    <script type="text/javascript" src="https://se.tastydietrecipe.com/js/slider.js"></script>
+    <script type="text/javascript" src="https://se.tastydietrecipe.com/js/index.js?"></script>
+</body>
+</html>
