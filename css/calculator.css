@@ -359,11 +359,19 @@ option {
 }
 
 .calculator_link {
-  color: #ba0017;
   margin: 0 20px;
   display: block;
+  margin-bottom: 0;
+  border: none;
+  background: #ba0017;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 3px 10px;
+  width: fit-content;
+  border-radius: 4px;
 }
 
-header .container .userButton{
+header .container .userButton {
   height: fit-content;
 }
