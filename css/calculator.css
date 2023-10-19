@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -356,4 +356,14 @@ option {
   display: none;
   font-weight: 600;
   color: #ba0017;
+}
+
+.calculator_link {
+  color: #ba0017;
+  margin: 0 20px;
+  display: block;
+}
+
+header .container .userButton{
+  height: fit-content;
 }
