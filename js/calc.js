@@ -355,7 +355,7 @@
                       var n = e + v.calorieModifiers[t];
                       return Math.round(n)
                   }(E(B, h), x);
-              v.resultElem.textContent = "Konsumera ".concat(I, " kcal per dag för att uppnå ditt viktmål"),
+              v.resultElem.textContent = "Konsumera ".concat(I, " per dag för att uppnå ditt viktmål"),
                   v.resultElem.style.color = "#ba0017",
                   v.resultValue = I,
                   p(B),

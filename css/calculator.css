@@ -10,6 +10,12 @@ main .contactForm.calc .contactBox {
   max-width: unset;
 }
 
+.contactForm.calc {
+  background: url(../imgs/bg.png) no-repeat left top;
+  background-size: auto 720px;
+  min-height: 720px;
+}
+
 .side__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,7 +56,11 @@ main .contactForm.calc .contactBox {
   place-items: center;
   padding: 30px;
   border-radius: 6px;
-  /*background: var(--accent2);*/
+  background: #fff;
+}
+
+.calculator h2 {
+  font-weight: 600;
 }
 
 #form01,
@@ -258,9 +268,10 @@ form h2,
 #form01 p {
   display: block;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 20px 0;
   color: #ba0017;
+  text-align: center;
 }
 
 #form01 .form-group {
@@ -348,14 +359,15 @@ div.pinned {
 }
 
 option {
-  color: #fff;
-  background: var(--accent2);
+  color: #000;
+  background: #fff;
 }
 
 #recipes_link {
   display: none;
   font-weight: 600;
   color: #ba0017;
+  text-align: center;
 }
 
 .calculator_link {
@@ -374,4 +386,10 @@ option {
 
 header .container .userButton {
   height: fit-content;
+}
+
+@media (max-width: 980px) {
+  main .contactForm {
+    background: none !important;
+  }
 }
