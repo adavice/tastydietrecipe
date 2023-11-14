@@ -393,3 +393,32 @@ header .container .userButton {
     background: none !important;
   }
 }
+
+#recepts_for_calc{
+  display: none;
+}
+
+#recepts_for_calc p {
+  padding-top: 50px !important;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px 0;
+  color: #ba0017;
+  text-align: center;
+}
+
+#set_container p{
+  font-size: 12px;
+  color: #303030;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 0 !important;
+}
+
+#set_container img,
+#set_container .img {
+  height: 150px;
+}
