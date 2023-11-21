@@ -422,3 +422,7 @@ header .container .userButton {
 #set_container .img {
   height: 150px;
 }
+
+#recepts_for_calc h3{
+  font-size: 12px;
+}
